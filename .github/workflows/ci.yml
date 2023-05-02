@@ -1,0 +1,59 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  Test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Install Max
+        run: brew install cycling74-max
+
+      - name: Install SuperVP
+        run: |
+          gpg --batch --yes --decrypt --output SuperVPMaxMSP-2021-11-osx.dmg --passphrase="$SUPERVP_PASSPHRASE" SuperVPMaxMSP-2021-11-osx.dmg.gpg
+          hdiutil attach SuperVPMaxMSP-2021-11-osx.dmg
+          mkdir -p ~/Documents/Max\ 8/Packages
+          cp -R /Volumes/Ircam\ SuperVPMaxMSP/SuperVPMaxMSP ~/Documents/Max\ 8/Packages
+        env:
+          SUPERVP_PASSPHRASE: ${{ secrets.SUPERVP_PASSPHRASE }}
+
+      - name: Clone max-test
+        run: |
+          cd ~/Documents/Max\ 8/Packages
+          git clone https://github.com/Cycling74/max-test.git
+          cd max-test
+          git submodule update --init
+
+      - name: Build oscar extension
+        run: |
+          cd ~/Documents/Max\ 8/Packages/max-test/source/projects/oscar
+          cmake -S . -B build
+          cmake --build build
+
+      - name: Configure Max and max-test
+        run: |
+          mkdir -p ~/Library/Application\ Support/Cycling\ \'74/Max\ 8/Settings
+          echo "max setsearchpath 5 \"Macintosh HD:$GITHUB_WORKSPACE\" temp;" > ~/Library/Application\ Support/Cycling\ \'74/Max\ 8/Settings/maxsearchpaths.txt
+          cd ~/Documents/Max\ 8/Packages/max-test
+          mv misc/max-test-config-example.json misc/max-test-config.json
+          rm -r patchers
+
+      # The test runner is more-or-less broken. To get a non-zero return code,
+      # you have to require the test runner Ruby script, and also pass an extra
+      # architecture argument to keep the test runner from calling exit; see
+      # https://github.com/Cycling74/max-test/issues/23
+      - name: Run tests
+        run: |
+          cd ~/Documents/Max\ 8/Packages/max-test/ruby
+          ruby -e 'require("./test.rb")' \
+               -e 'exit 1 if ENV["MAXTEST_PASS"] != "pass"' \
+               /Applications/Max.app i386 2> stderr.txt
+
+      - name: Show standard error
+        run: cat ~/Documents/Max\ 8/Packages/max-test/ruby/stderr.txt
+        if: always()
