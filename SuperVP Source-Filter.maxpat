@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 393.0, 186.0, 901.0, 792.0 ],
+		"rect" : [ 606.0, 196.0, 535.0, 792.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -49,7 +49,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 275.0, 46.0, 126.0, 118.0 ],
-					"presentation_linecount" : 8,
 					"text" : "What “timbre” and “mean” mean in SuperVP is undocumented, but is seems natural to treat them as percentages."
 				}
 
@@ -89,7 +88,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 191.0, 150.0, 41.0, 48.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 218.0, 118.0, 41.0, 48.0 ],
+					"presentation_rect" : [ 224.0, 118.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Adjust the balance between the processed and dry signals.",
@@ -118,7 +117,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 271.0, 503.0, 101.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 208.0, 0.0, 62.0, 18.0 ],
+					"presentation_rect" : [ 214.0, 0.0, 62.0, 18.0 ],
 					"text" : "Spectra",
 					"textjustification" : 1
 				}
@@ -148,7 +147,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 555.0, 527.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 214.0, 100.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 220.0, 96.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Short-time Fourier transform (STFT) hop ratio. The hop size of this device’s STFT is the window size divided by the hop ratio:\n\nhop size = window size ÷ hop ratio",
@@ -176,7 +175,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 555.0, 503.0, 50.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 208.0, 82.0, 62.0, 18.0 ],
+					"presentation_rect" : [ 214.0, 78.0, 62.0, 18.0 ],
 					"text" : "Hop Ratio",
 					"textjustification" : 1
 				}
@@ -206,7 +205,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 477.0, 527.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 214.0, 68.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 220.0, 64.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Short-time Fourier transform (STFT) interpolation factor. The size of the spectrum computed for each of this device’s STFT segments is the window size, times 2 raised to the interpolation:\n\nspectrum size = window size × 2^interpolation",
@@ -233,7 +232,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 477.0, 503.0, 66.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 208.0, 51.0, 62.0, 18.0 ],
+					"presentation_rect" : [ 214.0, 47.0, 62.0, 18.0 ],
 					"text" : "Interp.",
 					"textjustification" : 1
 				}
@@ -263,7 +262,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 383.0, 527.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 214.0, 36.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 220.0, 32.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Short-time Fourier transform (STFT) window size.",
@@ -292,7 +291,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 383.0, 503.0, 62.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 208.0, 19.0, 62.0, 18.0 ],
+					"presentation_rect" : [ 214.0, 15.0, 62.0, 18.0 ],
 					"text" : "Window Size",
 					"textjustification" : 1
 				}
@@ -306,7 +305,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 635.0, 20.0, 95.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 100.0, 121.0, 95.0, 18.0 ],
+					"presentation_rect" : [ 106.0, 121.0, 95.0, 18.0 ],
 					"text" : "Audio From",
 					"textjustification" : 0
 				}
@@ -387,7 +386,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 708.666666666666742, 335.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.5, 104.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 156.5, 104.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Maximum frequency for estimating the spectral envelope of the filter audio (audio selected using the Audio From menus).",
@@ -418,7 +417,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 754.666666666666742, 335.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.5, 104.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 156.5, 104.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "LPC order for estimating the spectral envelope of the filter audio (audio selected using the Audio From menus).",
@@ -446,7 +445,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 641.666666666666629, 335.0, 52.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 100.0, 103.0, 52.0, 18.0 ],
+					"presentation_rect" : [ 106.0, 103.0, 52.0, 18.0 ],
 					"text" : "LPC Order",
 					"textjustification" : 0,
 					"varname" : "filterEnvelopeParameterLabel"
@@ -538,7 +537,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 570.0, 335.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.5, 37.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 156.5, 37.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "LPC order for estimating the spectral envelope of the source audio (audio from the same track as this device).",
@@ -566,7 +565,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 409.666666666666686, 336.0, 52.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 100.0, 35.5, 52.0, 18.0 ],
+					"presentation_rect" : [ 106.0, 35.5, 52.0, 18.0 ],
 					"text" : "Max Freq.",
 					"textjustification" : 0,
 					"varname" : "sourceEnvelopeParameterLabel"
@@ -598,7 +597,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 615.0, 263.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 100.0, 84.0, 100.0, 20.0 ],
+					"presentation_rect" : [ 106.0, 84.0, 100.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "True Env.", "LPC" ],
@@ -643,7 +642,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 383.0, 263.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 100.0, 17.0, 100.0, 20.0 ],
+					"presentation_rect" : [ 106.0, 17.0, 100.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "True Env.", "LPC" ],
@@ -672,7 +671,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 403.0, 20.0, 101.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 97.5, 18.0 ],
+					"presentation_rect" : [ 6.0, 0.0, 97.5, 18.0 ],
 					"text" : "Source",
 					"textjustification" : 0
 				}
@@ -727,7 +726,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 523.0, 20.0, 102.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 86.0, 98.0, 18.0 ],
+					"presentation_rect" : [ 6.0, 86.0, 98.0, 18.0 ],
 					"text" : "Filter",
 					"textjustification" : 0
 				}
@@ -745,7 +744,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 523.0, 46.0, 50.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 105.0, 50.0, 63.0 ],
+					"presentation_rect" : [ 6.0, 105.0, 50.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Scaling for the timbre of the filter audio (audio selected using the Audio From menus).",
@@ -776,7 +775,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 575.0, 46.0, 50.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 48.0, 105.0, 50.0, 63.0 ],
+					"presentation_rect" : [ 54.0, 105.0, 50.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Scaling for the mean of the filter audio (audio selected using the Audio From menus).",
@@ -831,7 +830,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 403.0, 46.0, 50.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 18.0, 50.0, 63.0 ],
+					"presentation_rect" : [ 6.0, 18.0, 50.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Scaling for the timbre of the source audio (audio from the same track as this device).",
@@ -862,7 +861,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 455.0, 46.0, 50.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 48.0, 18.0, 50.0, 63.0 ],
+					"presentation_rect" : [ 54.0, 18.0, 50.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Scaling for the mean of the source audio (audio from the same track as this device).",
@@ -925,7 +924,7 @@
 					"offset" : [ 0.0, -16.0 ],
 					"patching_rect" : [ 635.0, 39.0, 98.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 100.0, 137.0, 98.0, 29.0 ],
+					"presentation_rect" : [ 106.0, 137.0, 98.0, 29.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -969,7 +968,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 477.0, 335.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.5, 37.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 156.5, 37.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Maximum frequency for estimating the spectral envelope of the source audio (audio from the same track as this device).",
