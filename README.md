@@ -1,4 +1,4 @@
-# supervp-source-filter
+# supervp-sourcefilter
 
 This is a Max for Live audio effect that wraps the supervp.sourcefilter~ object from IRCAM’s [SuperVP for Max](https://forum.ircam.fr/projects/detail/supervp-for-max/).
 
