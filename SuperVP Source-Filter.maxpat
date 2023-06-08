@@ -88,7 +88,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 191.0, 150.0, 41.0, 48.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 224.0, 118.0, 41.0, 48.0 ],
+					"presentation_rect" : [ 224.0, 119.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Adjust the balance between the processed and dry signals.",
@@ -305,7 +305,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 635.0, 20.0, 95.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 106.0, 121.0, 95.0, 18.0 ],
+					"presentation_rect" : [ 112.0, 121.0, 98.0, 18.0 ],
 					"text" : "Audio From",
 					"textjustification" : 0
 				}
@@ -386,7 +386,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 708.666666666666742, 335.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 156.5, 104.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 162.5, 104.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Maximum frequency for estimating the spectral envelope of the filter audio (audio selected using the Audio From menus).",
@@ -417,7 +417,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 754.666666666666742, 335.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 156.5, 104.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 162.5, 104.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "LPC order for estimating the spectral envelope of the filter audio (audio selected using the Audio From menus).",
@@ -445,7 +445,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 641.666666666666629, 335.0, 52.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 106.0, 103.0, 52.0, 18.0 ],
+					"presentation_rect" : [ 112.0, 103.0, 52.0, 18.0 ],
 					"text" : "LPC Order",
 					"textjustification" : 0,
 					"varname" : "filterEnvelopeParameterLabel"
@@ -537,7 +537,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 570.0, 335.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 156.5, 37.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 56.5, 104.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "LPC order for estimating the spectral envelope of the source audio (audio from the same track as this device).",
@@ -565,7 +565,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 409.666666666666686, 336.0, 52.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 106.0, 35.5, 52.0, 18.0 ],
+					"presentation_rect" : [ 6.0, 102.5, 52.0, 18.0 ],
 					"text" : "Max Freq.",
 					"textjustification" : 0,
 					"varname" : "sourceEnvelopeParameterLabel"
@@ -597,7 +597,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 615.0, 263.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 106.0, 84.0, 100.0, 20.0 ],
+					"presentation_rect" : [ 112.0, 84.0, 100.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "True Env.", "LPC" ],
@@ -642,7 +642,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 383.0, 263.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 106.0, 17.0, 100.0, 20.0 ],
+					"presentation_rect" : [ 6.0, 84.0, 100.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "True Env.", "LPC" ],
@@ -726,7 +726,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 523.0, 20.0, 102.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 6.0, 86.0, 98.0, 18.0 ],
+					"presentation_rect" : [ 113.0, 0.0, 98.0, 18.0 ],
 					"text" : "Filter",
 					"textjustification" : 0
 				}
@@ -744,7 +744,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 523.0, 46.0, 50.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 6.0, 105.0, 50.0, 63.0 ],
+					"presentation_rect" : [ 113.0, 18.0, 50.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Scaling for the timbre of the filter audio (audio selected using the Audio From menus).",
@@ -775,7 +775,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 575.0, 46.0, 50.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 54.0, 105.0, 50.0, 63.0 ],
+					"presentation_rect" : [ 161.0, 18.0, 50.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Scaling for the mean of the filter audio (audio selected using the Audio From menus).",
@@ -924,7 +924,7 @@
 					"offset" : [ 0.0, -16.0 ],
 					"patching_rect" : [ 635.0, 39.0, 98.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 106.0, 137.0, 98.0, 29.0 ],
+					"presentation_rect" : [ 112.0, 137.0, 98.0, 29.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -968,7 +968,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 477.0, 335.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 156.5, 37.0, 49.0, 15.0 ],
+					"presentation_rect" : [ 56.5, 104.0, 49.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_info" : "Maximum frequency for estimating the spectral envelope of the source audio (audio from the same track as this device).",
