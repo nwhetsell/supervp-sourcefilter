@@ -22,7 +22,7 @@ jobs:
           const driver = new Builder()
             .forBrowser('chrome')
             .setChromeOptions(new chrome.Options().setUserPreferences({
-              'download.default_directory': '/Users/runner/work/supervp-sourcefilter/supervp-sourcefilter',
+              'download.default_directory': __dirname,
               'download.prompt_for_download': false,
               'safebrowsing.enabled': true
             }))
