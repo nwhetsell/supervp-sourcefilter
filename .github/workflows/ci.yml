@@ -65,6 +65,9 @@ jobs:
           mv misc/max-test-config-example.json misc/max-test-config.json
           rm -r patchers
 
+      - name: Install Ruby gems
+        run: gem install sqlite3
+
       # The test runner is more-or-less broken. To get a non-zero return code,
       # you have to require the test runner Ruby script, and also pass an extra
       # architecture argument to keep the test runner from calling exit; see
