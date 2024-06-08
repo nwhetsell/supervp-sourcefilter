@@ -30,6 +30,7 @@ jobs:
             .then(() => driver.sleep(60000))
             .then(() => driver.quit());
           EOS
+          ls -a
           cd ~/Downloads
           ls -a
           hdiutil attach SuperVPMaxMSP-2024-04-osx.dmg
