@@ -33,6 +33,7 @@ jobs:
           ls -a
           cd ~/Downloads
           ls -a
+          find / -name SuperVPMaxMSP-2024-04-osx.dmg -print
           hdiutil attach SuperVPMaxMSP-2024-04-osx.dmg
           mkdir -p ~/Documents/Max\ 8/Packages
           cp -R /Volumes/Ircam\ SuperVPMaxMSP/SuperVPMaxMSP ~/Documents/Max\ 8/Packages
