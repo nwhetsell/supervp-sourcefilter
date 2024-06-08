@@ -34,7 +34,8 @@ jobs:
           mkdir -p ~/Documents/Max\ 8/Packages
           cp -R /Volumes/Ircam\ SuperVPMaxMSP/SuperVPMaxMSP ~/Documents/Max\ 8/Packages
         env:
-          SUPERVP_PASSPHRASE: ${{ secrets.SUPERVP_PASSPHRASE }}
+          IRCAM_LOGIN: ${{ secrets.IRCAM_LOGIN }}
+          IRCAM_PASSWORD: ${{ secrets.IRCAM_PASSWORD }}
 
       - name: Clone max-test
         run: |
