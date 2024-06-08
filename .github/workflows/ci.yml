@@ -77,7 +77,7 @@ jobs:
           cd ~/Documents/Max\ 8/Packages/max-test/ruby
           ruby -e 'require("./test.rb")' \
                -e 'exit 1 if ENV["MAXTEST_PASS"] != "pass"' \
-               /Applications/Max.app i386 2> stderr.txt
+               /Applications/Max.app arm64 2> stderr.txt
 
       - name: Show standard error
         run: cat ~/Documents/Max\ 8/Packages/max-test/ruby/stderr.txt
