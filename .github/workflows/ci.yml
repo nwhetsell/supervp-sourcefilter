@@ -19,10 +19,11 @@ jobs:
           node - <<EOS
           const { Builder, By, Key, until } = require('selenium-webdriver');
           const chrome = require('selenium-webdriver/chrome');
+          console.log(process.env.GITHUB_WORKSPACE);
           const driver = new Builder()
             .forBrowser('chrome')
             .setChromeOptions(new chrome.Options().setUserPreferences({
-              'download.default_directory': __dirname,
+              'download.default_directory': process.env.GITHUB_WORKSPACE,
               'download.prompt_for_download': false,
               'safebrowsing.enabled': true
             }))
