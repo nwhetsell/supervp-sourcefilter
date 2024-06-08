@@ -19,11 +19,10 @@ jobs:
           node - <<EOS
           const { Builder, By, Key, until } = require('selenium-webdriver');
           const chrome = require('selenium-webdriver/chrome');
-          console.log(__dirname);
           const driver = new Builder()
             .forBrowser('chrome')
             .setChromeOptions(new chrome.Options().setUserPreferences({
-              'download.default_directory': __dirname,
+              'download.default_directory': '/Users/runner/work/supervp-sourcefilter/supervp-sourcefilter',
               'safebrowsing.enabled': true
             }))
             .build();
