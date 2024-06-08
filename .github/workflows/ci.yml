@@ -23,6 +23,7 @@ jobs:
             .forBrowser('chrome')
             .setChromeOptions(new chrome.Options().setUserPreferences({
               'download.default_directory': '/Users/runner/work/supervp-sourcefilter/supervp-sourcefilter',
+              'download.prompt_for_download': false,
               'safebrowsing.enabled': true
             }))
             .build();
