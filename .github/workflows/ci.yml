@@ -8,16 +8,29 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Max
         run: brew install cycling74-max
 
       - name: Install SuperVP
         run: |
-          cd vendor
-          gpg --batch --yes --decrypt --output SuperVPMaxMSP.2023-06-osx.dmg --passphrase="$SUPERVP_PASSPHRASE" SuperVPMaxMSP.2023-06-osx.dmg.gpg
-          hdiutil attach SuperVPMaxMSP.2023-06-osx.dmg
+          npm install selenium-webdriver
+          node - <<EOS
+          const { Builder, By, Key, until } = require('selenium-webdriver');
+          const driver = new Builder().forBrowser('safari').build();
+          const DMGLocator = By.xpath('//a[@href="/asset/1680/SuperVPMaxMSP-2024-04-osx.dmg"]')
+          driver
+            .get('https://forum.ircam.fr/accounts/ircamauth/login/?next=%2Fprojects%2Fdetail%2Fsupervp-for-max%2F')
+            .then(() => driver.findElement(By.name('login')).sendKeys('$IRCAM_LOGIN'))
+            .then(() => driver.findElement(By.name('password')).sendKeys('$IRCAM_PASSWORD', Key.RETURN))
+            .then(() => driver.wait(until.elementLocated(DMGLocator, 20000)))
+            .then(() => driver.findElement(DMGLocator).click())
+            .then(() => driver.sleep(10000))
+            .then(() => driver.quit());
+          EOS
+          cd ~/Downloads
+          hdiutil attach SuperVPMaxMSP-2024-04-osx.dmg
           mkdir -p ~/Documents/Max\ 8/Packages
           cp -R /Volumes/Ircam\ SuperVPMaxMSP/SuperVPMaxMSP ~/Documents/Max\ 8/Packages
         env:
