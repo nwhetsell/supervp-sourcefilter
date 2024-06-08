@@ -19,7 +19,6 @@ jobs:
           node - <<EOS
           const { Builder, By, Key, until } = require('selenium-webdriver');
           const chrome = require('selenium-webdriver/chrome');
-          console.log(process.env.GITHUB_WORKSPACE);
           const driver = new Builder()
             .forBrowser('chrome')
             .setChromeOptions(new chrome.Options().setUserPreferences({
