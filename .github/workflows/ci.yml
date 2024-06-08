@@ -30,6 +30,7 @@ jobs:
             .then(() => driver.quit());
           EOS
           cd ~/Downloads
+          ls -a
           hdiutil attach SuperVPMaxMSP-2024-04-osx.dmg
           mkdir -p ~/Documents/Max\ 8/Packages
           cp -R /Volumes/Ircam\ SuperVPMaxMSP/SuperVPMaxMSP ~/Documents/Max\ 8/Packages
