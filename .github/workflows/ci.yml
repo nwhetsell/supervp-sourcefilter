@@ -25,6 +25,7 @@ jobs:
             .then(() => driver.findElement(By.name('login')).sendKeys('$IRCAM_LOGIN'))
             .then(() => driver.findElement(By.name('password')).sendKeys('$IRCAM_PASSWORD', Key.RETURN))
             .then(() => driver.wait(until.elementLocated(DMGLocator, 20000)))
+            .then(() => driver.getTitle()).then(title => console.log(title))
             .then(() => driver.findElement(DMGLocator).click())
             .then(() => driver.sleep(10000))
             .then(() => driver.quit());
