@@ -18,22 +18,24 @@ jobs:
           npm install selenium-webdriver
           node - <<EOS
           const { Builder, By, Key, until } = require('selenium-webdriver');
-          const driver = new Builder().forBrowser('safari').build();
-          const DMGLocator = By.xpath('//a[@href="/asset/1680/SuperVPMaxMSP-2024-04-osx.dmg"]')
+          const chrome = require('selenium-webdriver/chrome');
+          const driver = new Builder()
+            .forBrowser('chrome')
+            .setChromeOptions(new chrome.Options().setUserPreferences({
+              'download.default_directory': __dirname,
+              'safebrowsing.enabled': true
+            }))
+            .build();
+          const DMGLocator = By.xpath('//a[@href="/asset/1680/SuperVPMaxMSP-2024-04-osx.dmg"]');
           driver
             .get('https://forum.ircam.fr/accounts/ircamauth/login/?next=%2Fprojects%2Fdetail%2Fsupervp-for-max%2F')
             .then(() => driver.findElement(By.name('login')).sendKeys('$IRCAM_LOGIN'))
             .then(() => driver.findElement(By.name('password')).sendKeys('$IRCAM_PASSWORD', Key.RETURN))
             .then(() => driver.wait(until.elementLocated(DMGLocator, 20000)))
-            .then(() => driver.getTitle()).then(title => console.log(title))
             .then(() => driver.findElement(DMGLocator).click())
             .then(() => driver.sleep(60000))
             .then(() => driver.quit());
           EOS
-          ls -a
-          cd ~/Downloads
-          ls -a
-          find / -name SuperVPMaxMSP-2024-04-osx.dmg -print
           hdiutil attach SuperVPMaxMSP-2024-04-osx.dmg
           mkdir -p ~/Documents/Max\ 8/Packages
           cp -R /Volumes/Ircam\ SuperVPMaxMSP/SuperVPMaxMSP ~/Documents/Max\ 8/Packages
