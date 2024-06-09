@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 5,
-			"revision" : 4,
+			"minor" : 6,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -96,6 +96,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Dry/Wet",
 							"parameter_mmax" : 100.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Dry/Wet",
 							"parameter_speedlim" : 0.0,
 							"parameter_type" : 0,
@@ -156,6 +157,7 @@
 							"parameter_longname" : "Hop Ratio",
 							"parameter_mmax" : 258.0,
 							"parameter_mmin" : 3.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Hop Ratio",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
@@ -213,6 +215,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Interpolation",
 							"parameter_mmax" : 255.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Interpolation",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
@@ -271,6 +274,7 @@
 							"parameter_longname" : "Window Size",
 							"parameter_mmax" : 8192.0,
 							"parameter_mmin" : 1.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Window Size",
 							"parameter_steps" : 1,
 							"parameter_type" : 0,
@@ -394,6 +398,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Filter Envelope Max Frequency",
 							"parameter_mmax" : 22000.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Filt. Max Freq.",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3
@@ -426,6 +431,7 @@
 							"parameter_longname" : "Filter Envelope LPC Order",
 							"parameter_mmax" : 255.0,
 							"parameter_mmin" : 1.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Filt. LPC Order",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
@@ -546,6 +552,7 @@
 							"parameter_longname" : "Source Envelope LPC Order",
 							"parameter_mmax" : 255.0,
 							"parameter_mmin" : 1.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Src. LPC Order",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
@@ -606,6 +613,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Filter Envelope Mode",
 							"parameter_mmax" : 1,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Filt. Env. Mode",
 							"parameter_type" : 2,
 							"parameter_unitstyle" : 9
@@ -651,6 +659,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Source Envelope Mode",
 							"parameter_mmax" : 1,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Src. Env. Mode",
 							"parameter_type" : 2,
 							"parameter_unitstyle" : 9
@@ -752,6 +761,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Filter Timbre",
 							"parameter_mmax" : 100.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Filt. Tmbr.",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 5
@@ -783,6 +793,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Filter Mean",
 							"parameter_mmax" : 100.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Filt. Mean",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 5
@@ -838,6 +849,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Source Timbre",
 							"parameter_mmax" : 100.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Src. Tmbr.",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 5
@@ -869,6 +881,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Source Mean",
 							"parameter_mmax" : 100.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Src. Mean",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 5
@@ -976,6 +989,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_longname" : "Source Envelope Max Frequency",
 							"parameter_mmax" : 22000.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "Src. Max Freq.",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3

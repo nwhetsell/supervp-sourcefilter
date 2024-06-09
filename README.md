@@ -1,6 +1,6 @@
 # supervp-sourcefilter
 
-This is a Max for Live audio effect that wraps the supervp.sourcefilter\~ object from IRCAM’s [SuperVP for Max](https://forum.ircam.fr/projects/detail/supervp-for-max/) v2.18.9. This is in some ways an update of the supervp.sourcefilter\~ wrapper included in https://maxforlive.com/library/device/953/cross-synthesis.
+This is a Max for Live audio effect that wraps the supervp.sourcefilter\~ object from IRCAM’s [SuperVP for Max](https://forum.ircam.fr/projects/detail/supervp-for-max/) v2.18.10. This is in some ways an update of the supervp.sourcefilter\~ wrapper included in https://maxforlive.com/library/device/953/cross-synthesis.
 
 Note that SuperVP for Max is licensed under the [IRCAM Forum Software License Agreement](https://forum.ircam.fr/legal/contrat-de-licence-forum-ircam/). To download SuperVP for Max, visit https://auth.ircam.fr/accounts/signup/ to create an IRCAM Forum account, and then visit https://forum.ircam.fr/projects/detail/supervp-for-max/.
 
