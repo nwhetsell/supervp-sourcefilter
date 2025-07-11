@@ -50,6 +50,15 @@ jobs:
           git clone https://github.com/Cycling74/max-test.git
           cd max-test
           git submodule update --init
+          sed -i '' -e 's/Fixnum/Integer/g' ruby/rosc/lib/osc.rb
+
+      # The Fixnum (and Bignum) classes were last supported in Ruby 2.3, which
+      # reached end-of-life in 2019:
+      #   https://www.ruby-lang.org/en/downloads/branches/
+      - name: Patch max-test
+        run: |
+          cd ~/Documents/Max\ 9/Packages/max-test
+          sed -i '' -e 's/Fixnum/Integer/g' ruby/rosc/lib/osc.rb
 
       - name: Build oscar extension
         run: |
