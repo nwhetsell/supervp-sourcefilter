@@ -38,30 +38,30 @@ jobs:
             .then(() => driver.quit());
           EOS
           hdiutil attach SuperVPMaxMSP-2024-04-osx.dmg
-          mkdir -p ~/Documents/Max\ 8/Packages
-          cp -R /Volumes/Ircam\ SuperVPMaxMSP/SuperVPMaxMSP ~/Documents/Max\ 8/Packages
+          mkdir -p ~/Documents/Max\ 9/Packages
+          cp -R /Volumes/Ircam\ SuperVPMaxMSP/SuperVPMaxMSP ~/Documents/Max\ 9/Packages
         env:
           IRCAM_LOGIN: ${{ secrets.IRCAM_LOGIN }}
           IRCAM_PASSWORD: ${{ secrets.IRCAM_PASSWORD }}
 
       - name: Clone max-test
         run: |
-          cd ~/Documents/Max\ 8/Packages
+          cd ~/Documents/Max\ 9/Packages
           git clone https://github.com/Cycling74/max-test.git
           cd max-test
           git submodule update --init
 
       - name: Build oscar extension
         run: |
-          cd ~/Documents/Max\ 8/Packages/max-test/source/projects/oscar
+          cd ~/Documents/Max\ 9/Packages/max-test/source/projects/oscar
           cmake -S . -B build
           cmake --build build
 
       - name: Configure Max and max-test
         run: |
-          mkdir -p ~/Library/Application\ Support/Cycling\ \'74/Max\ 8/Settings
+          mkdir -p ~/Library/Application\ Support/Cycling\ \'74/Max\ 9/Settings
           echo "max setsearchpath 5 \"Macintosh HD:$GITHUB_WORKSPACE\" temp;" > ~/Library/Application\ Support/Cycling\ \'74/Max\ 8/Settings/maxsearchpaths.txt
-          cd ~/Documents/Max\ 8/Packages/max-test
+          cd ~/Documents/Max\ 9/Packages/max-test
           mv misc/max-test-config-example.json misc/max-test-config.json
           rm -r patchers
 
@@ -74,11 +74,11 @@ jobs:
       # https://github.com/Cycling74/max-test/issues/23
       - name: Run tests
         run: |
-          cd ~/Documents/Max\ 8/Packages/max-test/ruby
+          cd ~/Documents/Max\ 9/Packages/max-test/ruby
           ruby -e 'require("./test.rb")' \
                -e 'exit 1 if ENV["MAXTEST_PASS"] != "pass"' \
                /Applications/Max.app i386 2> stderr.txt
 
       - name: Show standard error
-        run: cat ~/Documents/Max\ 8/Packages/max-test/ruby/stderr.txt
+        run: cat ~/Documents/Max\ 9/Packages/max-test/ruby/stderr.txt
         if: always()
