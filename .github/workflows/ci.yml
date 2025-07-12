@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   Test:
-    runs-on: macos-15
+    runs-on: macos-13
 
     steps:
       - name: Check out repository
@@ -86,7 +86,7 @@ jobs:
           cd ~/Documents/Max\ 9/Packages/max-test/ruby
           ruby -e 'require("./test.rb")' \
                -e 'exit 1 if ENV["MAXTEST_PASS"] != "pass"' \
-               /Applications/Max.app arm64 2> stderr.txt
+               /Applications/Max.app x86_64 2> stderr.txt
 
       - name: Show standard error
         run: cat ~/Documents/Max\ 9/Packages/max-test/ruby/stderr.txt
