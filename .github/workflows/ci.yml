@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   Test:
-    runs-on: macos-13
+    runs-on: macos-14
 
     steps:
       - name: Check out repository
@@ -61,9 +61,10 @@ jobs:
 
       - name: Build oscar extension
         run: |
-          cd ~/Documents/Max\ 9/Packages/max-test/source/projects/oscar
+          cd ~/Documents/Max\ 9/Packages/max-test
           cmake -S . -B build -DCMAKE_POLICY_VERSION_MINIMUM=3.5
           cmake --build build
+          codesign --force --deep --sign - extensions/oscar.mxo
 
       - name: Configure Max and max-test
         run: |
