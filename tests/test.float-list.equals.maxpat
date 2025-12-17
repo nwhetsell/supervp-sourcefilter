@@ -86,18 +86,6 @@
                 "box": {
                     "bubble": 1,
                     "bubbleside": 3,
-                    "id": "obj-12",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 15.0, 210.0, 225.0, 24.0 ],
-                    "text": "Iterate over pairs of list items."
-                }
-            },
-            {
-                "box": {
-                    "bubble": 1,
-                    "bubbleside": 3,
                     "id": "obj-11",
                     "maxclass": "comment",
                     "numinlets": 1,
